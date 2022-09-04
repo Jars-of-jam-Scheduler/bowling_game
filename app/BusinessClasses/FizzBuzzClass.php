@@ -9,8 +9,10 @@ class FizzBuzzClass
 	{
 		$shown_string = $this->isMultipleOf3($number) ? 'Fizz' : '';
 		$shown_string .= $this->isMultipleOf5($number) ? 'Buzz' : '';
-		
-		$shown_string = $this->isNotMultiple($shown_string) ? $number : $shown_string;
+
+		if($this->isNotMultiple($shown_string)) {
+			$shown_string = $number;
+		}
 
 		return $shown_string;
 	}
