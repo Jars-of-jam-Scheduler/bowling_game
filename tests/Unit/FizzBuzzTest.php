@@ -33,4 +33,10 @@ class FizzBuzzTest extends TestCase
         $this->assertEquals('FizzBuzz', $fizz_buss_instance->fizzBuzz(15));
     }
 
+	public function testFizzBuzzNotMultiple()
+    {
+		$fizz_buss_instance = new FizzBuzzClass;
+        $this->assertEquals('7', $fizz_buss_instance->fizzBuzz(7));
+    }
+
 }
